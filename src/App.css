@@ -92,5 +92,20 @@ tbody td span {
     margin-bottom: 25px;
 }
 
-
+@media (max-width: 500px) {
+    .cal-header {
+        margin: 0;
+        text-align: center;
+    }
+    .table-bordered thead td, .table-bordered thead th {
+        padding: 0;
+    }
+    .table-bordered td, .table-bordered th {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .popup-container {
+        width: 300px;
+    }
+}
 
