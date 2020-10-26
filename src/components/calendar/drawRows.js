@@ -1,5 +1,6 @@
 import React from 'react';
-import CalendarRowComponent from './calendarRow';
+import CalendarRowComponent from './CalendarRow';
+import { generateRandomKey } from '../../Constants/Utils';
 
 const DrawRows = (props) => {
     let startDay = 1;
@@ -31,7 +32,7 @@ const DrawRows = (props) => {
         let rows = [];
         for (let i = 0; i < 6; i++) {
             let cells = getCells(i);
-            rows.push(<CalendarRowComponent key={i + '-calRow'} cells={cells}/>)
+            rows.push(<CalendarRowComponent key={generateRandomKey()} cells={cells}/>)
         }
         return rows;
     }

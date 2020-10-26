@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import { generateRandomKey } from '../../Constants/Utils';
 
 const CalRow = (props) => {
     const drawCells = () => {
@@ -7,10 +8,10 @@ const CalRow = (props) => {
             if(d.eventData) {
                 event = d.eventData.map(e => {
                     let classAttr = e === ' ' ? 'event empty-event' : 'event';
-                    return <div key={index} className={classAttr} title={e}>{e}</div>
+                    return <div key={generateRandomKey()} className={classAttr} title={e}>{e}</div>
                 })
             }
-            return <td key={index}>
+            return <td key={generateRandomKey()}>
                 <span className={d.customClass}>{d.day}</span>
                 {event}
             </td>
