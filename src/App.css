@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+body {
+    background: lightgray;
+}
+.calendarWrapper {
+    padding-top: 25px;
+    background: white;
+    margin: auto;
+}
+.montName h3 {
+    margin-top: 5px;
+    text-align: center;
+}
+table {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+thead th {
+    text-align: center;
+}
+tbody tr{
+    height: 70px;
+    vertical-align: top;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+tbody td {
+    width: 14%;
+    font-size: 1.2em;
+    text-align: right;
+}
+table, table td , thead th {
+    border: 1px solid lightgray;
+}
+tbody td span {
+    padding: 5px
+}
+.next-month {
+    color: lightgray;
+}
+.today {
+    color: white;
+    background: #4242f3;
+    display: inline-block;
+    border-radius: 15px;
+    line-height: 12px;
+}
+.event {
+    background: #0986f5;
+    color: white;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+.empty-event {
+    min-height: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.popup-container-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.background-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.4;
+    z-index: 1;
+}
+.popup-container {
+    position: absolute;
+    background: #fff;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+}
+.popup-container h1 {
+    font-size: 20px;
+    text-align: left !important;
+    font-weight: 500;
+    margin-bottom: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
