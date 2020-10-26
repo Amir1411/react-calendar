@@ -11,7 +11,7 @@ const CalRow = (props) => {
                     return <div key={generateRandomKey()} className={classAttr} title={e}>{e}</div>
                 })
             }
-            return <td key={generateRandomKey()}>
+            return <td key={generateRandomKey()+d.day}>
                 <span className={d.customClass}>{d.day}</span>
                 {event}
             </td>

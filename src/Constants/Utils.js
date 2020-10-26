@@ -9,7 +9,7 @@ const generateRandomKey = () => {
     for (var i = 0; i < 4; i++)
         text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-    return text+"abcd";
+    return text+ new Date().getTime();
 };
 
 module.exports = {
