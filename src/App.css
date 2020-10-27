@@ -92,6 +92,13 @@ tbody td span {
     margin-bottom: 25px;
 }
 
+.error {
+    background: red;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 @media (max-width: 500px) {
     .cal-header {
         margin: 0;
@@ -106,6 +113,12 @@ tbody td span {
     }
     .popup-container {
         width: 300px;
+    }
+    .calendarWise {
+        margin-top: 12px;
+    }
+    .calendarWise .float-right {
+        float: none !important;
     }
 }
 

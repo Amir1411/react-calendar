@@ -12,7 +12,21 @@ const generateRandomKey = () => {
     return text+ new Date().getTime();
 };
 
+const checkTime = (element) => {
+    let currentTime = new Date().toLocaleTimeString();
+    let currentHour = currentTime.split(':')[0];
+    let currentMin = currentTime.split(':')[1];
+
+    let elementHour = element.split(":")[0]
+    let elementMin = element.split(":")[1]
+    if (elementHour >= currentHour && elementMin >= currentMin) {
+        return false;
+    }
+    return true;
+}
+
 module.exports = {
     getCurrentDate,
-    generateRandomKey
+    generateRandomKey,
+    checkTime
 }
