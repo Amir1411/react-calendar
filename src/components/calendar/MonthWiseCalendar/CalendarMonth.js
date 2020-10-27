@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { monthNames, weekNames } from "../../Constants/Constants";
-import { getCurrentDate } from "../../Constants/Utils";
+import { monthNames, weekNames } from "../../../Constants/Constants";
+import { getCurrentDate } from "../../../Constants/Utils";
 
 const CalendarMonth = (props) => {
     const [showCalendarWise, setShowCalendarWise] = useState("Month");

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import DrawRowsComponent from "./DrawRows";
-import CreateEvent from './CreateEvent';
-import CalendarMonth from './CalendarMonth';
+import CreateEvent from './MonthWiseCalendar/CreateEvent';
+import CalendarMonth from './MonthWiseCalendar/CalendarMonth';
 import DayWiseCalendar from './DayWiseCalendar';
-import { weekNames, eventsDumpData } from '../../Constants/Constants';
+import MonthView from './MonthWiseCalendar/MonthView';
+import { eventsDumpData } from '../../Constants/Constants';
 import { getCurrentDate } from '../../Constants/Utils';
 
 let eventsData = eventsDumpData;
@@ -64,20 +64,12 @@ const Calendar = () => {
                     toggleCalendarWise={toggleCalendarWise} 
                 />
                 {showCalendarWise === "Month" ? (
-                    <table width="100%" className="table table-bordered">
-                        <thead>
-                            <tr>
-                                {weekNames.map((name) => {
-                                    return <th key={name}>{name}</th>;
-                                })}
-                            </tr>
-                        </thead>
-                        <DrawRowsComponent
-                            date={date}
-                            getCurrentDate={getCurrentDate()}
-                            events={events}
-                        />
-                    </table>) : (
+                    <MonthView 
+                        date={date} 
+                        getCurrentDate={getCurrentDate()}
+                        events={events} 
+                    />
+                    ) : (
                         <DayWiseCalendar 
                             currDayDate={currDayDate} 
                             getCurrentDate={getCurrentDate()}

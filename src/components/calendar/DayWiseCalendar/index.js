@@ -1,16 +1,14 @@
 import React from "react";
-import { DayTime } from "../../../Constants/Constants";
+import { dayTime } from "../../../Constants/Utils";
 
 const DayWiseCalendar = (props) => {
     const currentDate = props.currDayDate;
-    const drawRows = () => {
-        
-    }
+    const dayTimeArray = dayTime();
     return (
         <div style={{height: "600px", overflow: "auto"}}>
             <table className="table table-bordered">
                 <tbody>
-                    {DayTime.map((d, i) => {
+                    {dayTimeArray.map((d, i) => {
                         return (
                             <tr key={i}>
                                 <td style={{ width: "10%" }}>{d}</td>

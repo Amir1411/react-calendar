@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { checkTime } from '../../Constants/Utils';
+import { checkTime } from '../../../Constants/Utils';
 
 const CreateEvent = (props) => {
     const [errorContainer, setErrorContainer] = useState("");

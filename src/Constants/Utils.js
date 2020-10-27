@@ -25,8 +25,24 @@ const checkTime = (element) => {
     return true;
 }
 
+const dayTime = () => {
+    const x = 60; //minutes interval
+    const times = [];
+    let tt = 0;
+
+    for (let i=0; tt < 24 * 60; i++) {
+        const hh = Math.floor( tt / 60 );
+        const mm = ( tt % 60);
+        times[i] = ("0" + hh).slice(-2) + ':' + ("0" + mm).slice(-2); // pushing data in array in [00:00 - 12:00 AM/PM format]
+        tt = tt + x;
+    }
+
+    return times;
+}
+
 module.exports = {
     getCurrentDate,
     generateRandomKey,
-    checkTime
+    checkTime,
+    dayTime
 }
