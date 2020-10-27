@@ -3,10 +3,15 @@ import DrawRowsComponent from "./DrawRows";
 import CreateEvent from './CreateEvent';
 import CalendarMonth from './CalendarMonth';
 import DayWiseCalendar from './DayWiseCalendar';
-import { weekNames, eventsData } from '../../Constants/Constants';
+import { weekNames, eventsDumpData } from '../../Constants/Constants';
 import { getCurrentDate } from '../../Constants/Utils';
 
-localStorage.setItem("eventsData", JSON.stringify(eventsData));
+let eventsData = eventsDumpData;
+if (localStorage.getItem("eventsData") === null || localStorage.getItem("eventsData") === undefined) {
+    localStorage.setItem("eventsData", JSON.stringify(eventsData));
+} else {
+    eventsData = JSON.parse(localStorage.getItem("eventsData"));
+}
 
 const Calendar = () => {
 

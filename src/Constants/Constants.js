@@ -15,7 +15,7 @@ const monthNames = [
 
 const weekNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-const eventsData = [
+const eventsDumpData = [
     {
         id: 1,
         from: "2020-10-27",
@@ -72,6 +72,6 @@ const DayTime = [
 module.exports = {
     monthNames,
     weekNames,
-    eventsData,
+    eventsDumpData,
     DayTime
 }
